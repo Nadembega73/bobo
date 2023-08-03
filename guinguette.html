@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>BOBO TOURISME - La Guinguette</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="logo">
+    <img src="logo1.jfif">
+   </div><br><br><br>
+  <header>
+    <div style="background-image: url(silures.jpg); text-align: left;"> 
+      <h1>BOBO DIOULASSO</h1>
+    </div>
+    <div style="background-color: rgb(131, 143, 153); border-radius: 50%; "><p id="demo" align="left"></p>
+    </div>
+        
+        <div class="navbar">
+      <a href="index.html" >Accueil</a>
+      <a href="patrimoine.html" class="active">Patrimoine</a>
+      <a href="hotel.html">Réservation d'hôtel</a>
+      <a href="galerie.html">Galerie</a>
+    </div>
+        
+  </header><br><br><br><br>
+  <div class="bar">
+    <a href="silure.html" >Les silures</a>
+    <a href="village_de koro.html" >Le village de koro</a>
+    <a href="mosquée.html"">La mosquée de Dioulasso Bâ
+    <a href="sitarail.html">La sitarail</a></a>
+    <a href="cathedrale.html" >La cathedrale</a>
+    <a href="Musée.html" >Le Mussée</a>
+    <a href="#"class="active">La Guinguette</a>
+  </div><br><br>
+  <section id="site1">
+    <h1>La Guinguette</h1><br><br>
+    <img src="guinguette.png" alt="Site 2"style="width: 500px; height: 500px;border-radius: 10%;">
+    <p class="silure">
+        <mark>La Guinguette</mark>; est un site touristique situé à 15 km de la ville de Bobo-Dioulasso, dans la forêt classée de Kou. C’est un plan d’eau naturel formé par la rivière du Kou et son affluent, qui offre un cadre agréable pour se baigner, se détendre et pique-niquer. La Guinguette doit son nom au premier classement de la forêt en 1942, qui était un lieu de repos des soldats français. La Guinguette est aussi le nom d’un petit établissement situé sur les bords de la rivière, qui propose des boissons et des repas. La Guinguette est un lieu apprécié des habitants de Bobo et des touristes, qui viennent profiter de la nature et du calme.
+    </p>
+    </section>
+  <script>
+    setInterval(myTimer,1000);
+    function myTimer(){
+      const d = new Date();
+      document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+    }
+  
+  </script>
+
+<button onclick="retourEnHaut()" id="btn-retour" title="Revenir en haut de la page">&#8593;</button>
+
+<script>
+  // Afficher ou masquer le bouton en fonction de la position de défilement
+  window.onscroll = function() { afficherMasquerBouton(); };
+
+  function afficherMasquerBouton() {
+    var boutonRetour = document.getElementById("btn-retour");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      boutonRetour.style.display = "block";
+    } else {
+      boutonRetour.style.display = "none";
+    }
+  }
+
+  // Fonction pour remonter en haut de la page
+  function retourEnHaut() {
+    document.body.scrollTop = 0; // Pour les anciens navigateurs
+    document.documentElement.scrollTop = 0; // Pour les navigateurs modernes
+  }
+</script>
+
+
+  <footer>
+    <p>&copy; 2023 site_touristique</p>
+    <address>+226 67 95 60 65 </address><br>
+    <email>pengdewendenadembega@gmail.com</email><br>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>BOBO TOURISME - ACCUEIL</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script language="JavaScript" src="fichier.js"></script>
+  <style>
+    #map {
+      height: 200px;
+      width: 25%;
+    }
+  </style>
+</head>
+<body> 
+     <div class="logo">
+     <img src="logo1.jfif">
+    </div><br><br><br>
+    <div style="background-image: url(village_koro.jpg); background-repeat: no-repeat;">
+  <header>
+
+<div style="background-image: url(silures.jpg); text-align: left;"> 
+  <h1>BOBO DIOULASSO</h1>
+</div>
+<div style="background-color: rgb(131, 143, 153); border-radius: 50%; "><p id="demo" align="left"></p>
+</div>
+    
+    <div class="navbar">
+  <a href="#" class="active">Accueil</a>
+  <a href="patrimoine.html">Patrimoine</a>
+  <a href="hotel.html">Réservation d'hôtel</a>
+  <a href="galerie.html">Galerie</a>
+</div>
+  </header>
+  </div>
+  <marquee><h1 style="font-style:inherit;font-size: 40px;font-family: 'Times New Roman', Times, serif;"><mark>Bienvenue dans notre site touristique<br>Contact : 67 95 60 65</mark></h1></marquee>
+  <section>
+    <div style="background-color: antiquewhite;font-size: 40px;font-family: serif; text-align: center;">
+    <p>Bienvenue dans notre ville touristique ! Située dans les Hauts-Bassins, notre ville offre une richesse culturelle et patrimoniale unique.<br> Explorez nos musées, admirez notre architecture, goûtez à notre gastronomie locale et profitez de nos hébergements confortables.<br> Que vous soyez en famille, entre amis ou en couple, notre ville est la destination idéale pour des vacances inoubliables.</p>
+     </div>
+  </section><br>
+  <h1>Carte de Bobo Dioulasso</h1>
+    <div id="map"></div>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdxw3LIZwVpIwquQrAaQk1k716Epyuf3c&callback=initMap" async defer></script>
+    <script>
+      function initMap() {
+        var bobo = {lat: 11.177116, lng: -4.297633};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: bobo
+        });
+        var marker = new google.maps.Marker({
+          position: bobo,
+          map: map,
+          title: 'Bobo Dioulasso'
+        });
+      }
+    </script>
+
+    <section>
+    <h2>Vidéos de présentation de quelque<br> sites touristique de Bobo-Dioulasso</h2>
+    <div>
+    <iframe width="560" height="315" src="Bobo-Dioulasso,_la_perle_culturelle_du_Burkina_Faso(720p).mp4" title="Vidéo 3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
+  </div>
+
+
+<form id="comment-form">
+  <label for="name">Nom:</label>
+  <input type="text" id="name" name="name"><br><br>
+  <label for="comment">Commentaire:</label><br>
+  <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+  <button type="submit" id="submit-btn">Envoyer</button>
+  <button type="reset" id="cancel-btn">Annuler</button>
+</form><br><br>
+
+<section id="newsletter">
+  <h2>Abonnez-vous à notre newsletter</h2>
+  <form action="#" method="post">
+    <label for="email">Adresse e-mail :</label>
+    <input type="email" name="email" id="email" required>
+    <input type="submit" value="S'abonner">
+  </form>
+</section>
+
+<script>
+  setInterval(myTimer,1000);
+  function myTimer(){
+    const d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+  }
+
+</script>
+<button onclick="retourEnHaut()" id="btn-retour" title="Revenir en haut de la page">&#8593;</button>
+
+<script>
+  // Afficher ou masquer le bouton en fonction de la position de défilement
+  window.onscroll = function() { afficherMasquerBouton(); };
+
+  function afficherMasquerBouton() {
+    var boutonRetour = document.getElementById("btn-retour");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      boutonRetour.style.display = "block";
+    } else {
+      boutonRetour.style.display = "none";
+    }
+  }
+
+  // Fonction pour remonter en haut de la page
+  function retourEnHaut() {
+    document.body.scrollTop = 0; // Pour les anciens navigateurs
+    document.documentElement.scrollTop = 0; // Pour les navigateurs modernes
+  }
+</script>
+
+<footer>
+  <p>&copy; 2023 site_touristique</p>
+  <address>+226 67 95 60 65 </address><br>
+    <email>pengdewendenadembega@gmail.com</email><br>
+</footer>
+
+</body>
+</html>
+
+
+

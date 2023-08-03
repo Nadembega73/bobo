@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>BOBO TOURISME - La mosquée de Dioulasso Bâ</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="logo">
+    <img src="logo1.jfif">
+   </div><br><br><br>
+  <header>
+    <div style="background-image: url(silures.jpg); text-align: left;"> 
+      <h1>BOBO DIOULASSO</h1>
+    </div>
+    <div style="background-color: rgb(131, 143, 153); border-radius: 50%; "><p id="demo" align="left"></p>
+    </div>
+        
+        <div class="navbar">
+      <a href="index.html" >Accueil</a>
+      <a href="patrimoine.html" class="active">Patrimoine</a>
+      <a href="hotel.html">Réservation d'hôtel</a>
+      <a href="galerie.html">Galerie</a>
+    </div>
+        
+  </header><br><br><br><br>
+  <div class="bar">
+    <a href="silure.html" >Les silures</a>
+    <a href="village_de koro.html" >Le village de koro</a>
+    <a href="#" class="active">La mosquée de Dioulasso Bâ
+    <a href="sitarail.html">La sitarail</a></a>
+    <a href="cathedrale.html">La cathedrale</a>
+    <a href="Musée.html">Le Mussée</a>
+    <a href="guinguette.html">La Guinguette</a>
+  </div><br><br>
+  <section id="site1">
+    <h1>La mosquée de DIOULASSO Bâ</h1><br><br>
+    <img src="mosqu.jpg" alt="Site 2" style="width: 500px; height: 500px;border-radius: 10%;">
+    <p class="silure">
+      <mark>La mosquée de DIOULASSO Bâ</mark>;un monument historique et religieux construit en 1880, qui mêle les styles architecturaux bobo et dioula. Vous pouvez admirer sa façade en banco et ses piliers en bois sculpté, et visiter son intérieur avec un guide local.
+      </p>
+  </section>
+  <script>
+    setInterval(myTimer,1000);
+    function myTimer(){
+      const d = new Date();
+      document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+    }
+  
+  </script>
+
+<button onclick="retourEnHaut()" id="btn-retour" title="Revenir en haut de la page">&#8593;</button>
+
+<script>
+  // Afficher ou masquer le bouton en fonction de la position de défilement
+  window.onscroll = function() { afficherMasquerBouton(); };
+
+  function afficherMasquerBouton() {
+    var boutonRetour = document.getElementById("btn-retour");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      boutonRetour.style.display = "block";
+    } else {
+      boutonRetour.style.display = "none";
+    }
+  }
+
+  // Fonction pour remonter en haut de la page
+  function retourEnHaut() {
+    document.body.scrollTop = 0; // Pour les anciens navigateurs
+    document.documentElement.scrollTop = 0; // Pour les navigateurs modernes
+  }
+</script>
+
+
+  <footer>
+    <p>&copy; 2023 site_touristique</p>
+    <address>+226 67 95 60 65 </address><br>
+    <email>pengdewendenadembega@gmail.com</email><br>
+  </footer>
+</body>
+</html>

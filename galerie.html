@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>BOBO TOURISME - Galerie</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script language="JavaScript" src="fichier.js"></script>
+</head>
+<body>
+    <div class="logo">
+        <img src="logo1.jfif">
+       </div><br><br><br>
+    <header>
+
+        <div style="background-image: url(silures.jpg); text-align: left;"> 
+          <h1>BOBO DIOULASSO</h1>
+        </div>
+          <div style="background-color: rgb(131, 143, 153); border-radius: 50%; "><p id="demo" align="left"></p>
+          </div>
+            
+            <div class="navbar">
+          <a href="index.html" >Accueil</a>
+          <a href="patrimoine.html">Patrimoine</a>
+          <a href="hotel.html">Réservation d'hôtel</a>
+          <a href="#" class="active">Galerie</a>
+        </div>
+          </header><br><br>
+          
+          <h1 class="bobo">Galerie</h1>
+  <section class="gallery">
+    <img src="village_koro.jpg" alt="Image 1">
+    <img src="fetiche_jumeaux.jpg">
+    <img src="koro3.jpg">
+    
+    <img src="silures.jpg" alt="Image 2">
+    <img src="silure2.png" alt="Image 3">
+    <img src="silure.jpg">
+
+    <img src="Musée-communal-sogossira-sanon-bobodioulasso-1024x624.jpg" alt="Image 4">
+    <img src="muse.jfif">
+
+    <img src="images-4.png">
+    <img src="guinguette.png" alt="Image 5">
+
+    <img src="cathe2.jfif" alt="Image 5">
+    <img src="cathe1.jfif">
+    <img src="cathedrale.jpg">
+
+    <img src="1240334884_1.jpg">
+    
+    <img src="arton60.jpg">
+    <img src="mosquée.jpg">
+    <img src="1240334884_1.jpg">
+    
+    
+    
+    <iframe width="360" height="315" src="Bobo-Dioulasso,_la_perle_culturelle_du_Burkina_Faso(720p).mp4" title="Vidéo 3" frameborder="30" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="border-radius: 20%;"></iframe><br><br>
+    <iframe width="360" height="315" src="Koro_le_village_Burkina_Faso,_faso_regions(480p).mp4" title="Vidéo 3" frameborder="30" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="border-radius: 20%;"></iframe><br><br>
+  </section>  <br><br><br><br><br><br><br><br>
+
+
+<script>
+    setInterval(myTimer,1000);
+    function myTimer(){
+      const d = new Date();
+      document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+    }
+  
+  </script>
+
+<button onclick="retourEnHaut()" id="btn-retour" title="Revenir en haut de la page">&#8593;</button>
+
+<script>
+  // Afficher ou masquer le bouton en fonction de la position de défilement
+  window.onscroll = function() { afficherMasquerBouton(); };
+
+  function afficherMasquerBouton() {
+    var boutonRetour = document.getElementById("btn-retour");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      boutonRetour.style.display = "block";
+    } else {
+      boutonRetour.style.display = "none";
+    }
+  }
+
+  // Fonction pour remonter en haut de la page
+  function retourEnHaut() {
+    document.body.scrollTop = 0; // Pour les anciens navigateurs
+    document.documentElement.scrollTop = 0; // Pour les navigateurs modernes
+  }
+</script>
+
+
+  <footer>
+    <p>&copy; 2023 site_touristique</p>
+    <address>+226 67 95 60 65 </address><br>
+    <email>pengdewendenadembega@gmail.com</email><br>
+  </footer>
+</body>
+</html>
